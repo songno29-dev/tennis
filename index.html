@@ -15,508 +15,127 @@
     padding: 16px;
   }
   .container { max-width: 720px; margin: 0 auto; }
-
-  .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 20px;
-    flex-wrap: wrap;
-    gap: 12px;
-  }
+  .header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; flex-wrap: wrap; gap: 12px; }
   .title { font-size: 22px; font-weight: 600; }
   .subtitle { font-size: 13px; color: #666; margin-top: 2px; }
-
   .stage { display: none; }
   .stage.active { display: block; }
-
-  /* ============ 1단계: 인원 등록 ============ */
-  .setup-info {
-    background: white;
-    border: 1px solid #e5e5e0;
-    border-radius: 12px;
-    padding: 16px 20px;
-    margin-bottom: 16px;
-  }
+  .setup-info { background: white; border: 1px solid #e5e5e0; border-radius: 12px; padding: 16px 20px; margin-bottom: 16px; }
   .setup-info h2 { font-size: 16px; margin-bottom: 8px; }
   .setup-info p { font-size: 13px; color: #666; }
-
-  .config-row {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    margin-top: 12px;
-    padding-top: 12px;
-    border-top: 1px solid #f0f0eb;
-    flex-wrap: wrap;
-  }
+  .config-row { display: flex; align-items: center; gap: 12px; margin-top: 12px; padding-top: 12px; border-top: 1px solid #f0f0eb; flex-wrap: wrap; }
   .config-label { font-size: 14px; font-weight: 500; min-width: 130px; }
-  .config-input {
-    width: 70px;
-    padding: 6px 10px;
-    font-size: 14px;
-    border: 1px solid #d4d4cc;
-    border-radius: 8px;
-    text-align: center;
-    font-family: inherit;
-  }
-
+  .config-input { width: 70px; padding: 6px 10px; font-size: 14px; border: 1px solid #d4d4cc; border-radius: 8px; text-align: center; font-family: inherit; }
   .player-list { margin-bottom: 16px; }
-  .player-card {
-    background: white;
-    border: 1px solid #e5e5e0;
-    border-radius: 12px;
-    padding: 12px 16px;
-    margin-bottom: 10px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-  }
-  .player-card-num {
-    font-size: 13px;
-    color: #999;
-    min-width: 24px;
-    font-weight: 600;
-  }
-  .player-input {
-    flex: 1;
-    padding: 8px 12px;
-    font-size: 15px;
-    border: 1px solid #d4d4cc;
-    border-radius: 8px;
-    font-family: inherit;
-    min-width: 0;
-  }
+  .player-card { background: white; border: 1px solid #e5e5e0; border-radius: 12px; padding: 12px 16px; margin-bottom: 10px; display: flex; align-items: center; gap: 10px; }
+  .player-card-num { font-size: 13px; color: #999; min-width: 24px; font-weight: 600; }
+  .player-input { flex: 1; padding: 8px 12px; font-size: 15px; border: 1px solid #d4d4cc; border-radius: 8px; font-family: inherit; min-width: 0; }
   .player-input:focus { outline: none; border-color: #1a1a1a; }
-
-  .gender-toggle {
-    display: flex;
-    border: 1px solid #d4d4cc;
-    border-radius: 8px;
-    overflow: hidden;
-  }
-  .gender-btn {
-    padding: 8px 12px;
-    font-size: 13px;
-    border: none;
-    background: white;
-    cursor: pointer;
-    font-family: inherit;
-    transition: all 0.15s;
-    color: #666;
-    font-weight: 500;
-  }
+  .gender-toggle { display: flex; border: 1px solid #d4d4cc; border-radius: 8px; overflow: hidden; }
+  .gender-btn { padding: 8px 12px; font-size: 13px; border: none; background: white; cursor: pointer; font-family: inherit; transition: all 0.15s; color: #666; font-weight: 500; }
   .gender-btn.active.male { background: #E6F1FB; color: #0C447C; }
   .gender-btn.active.female { background: #FBEAF0; color: #4B1528; }
-
-  .delete-btn {
-    background: transparent;
-    border: none;
-    color: #c44;
-    font-size: 18px;
-    cursor: pointer;
-    padding: 4px 8px;
-    border-radius: 6px;
-  }
+  .delete-btn { background: transparent; border: none; color: #c44; font-size: 18px; cursor: pointer; padding: 4px 8px; border-radius: 6px; }
   .delete-btn:hover { background: #fee; }
-
-  .add-player-btn {
-    width: 100%;
-    padding: 14px;
-    background: white;
-    border: 1px dashed #d4d4cc;
-    border-radius: 12px;
-    font-size: 14px;
-    cursor: pointer;
-    color: #666;
-    font-family: inherit;
-    transition: all 0.15s;
-  }
+  .add-player-btn { width: 100%; padding: 14px; background: white; border: 1px dashed #d4d4cc; border-radius: 12px; font-size: 14px; cursor: pointer; color: #666; font-family: inherit; transition: all 0.15s; }
   .add-player-btn:hover { border-color: #1a1a1a; color: #1a1a1a; }
-
-  .summary-box {
-    background: white;
-    border: 1px solid #e5e5e0;
-    border-radius: 12px;
-    padding: 16px 20px;
-    margin: 20px 0;
-  }
-  .summary-row {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 6px 0;
-    font-size: 14px;
-  }
+  .summary-box { background: white; border: 1px solid #e5e5e0; border-radius: 12px; padding: 16px 20px; margin: 20px 0; }
+  .summary-row { display: flex; justify-content: space-between; align-items: center; margin: 6px 0; font-size: 14px; }
   .summary-row .label { color: #666; }
   .summary-row .value { font-weight: 600; }
+  .summary-row .value.adjusted { color: #BA7517; }
   .summary-warning { color: #c44; font-size: 12px; margin-top: 8px; padding: 8px 10px; background: #fee; border-radius: 6px; }
+  .summary-info { color: #BA7517; font-size: 12px; margin-top: 8px; padding: 8px 10px; background: #FAEEDA; border-radius: 6px; line-height: 1.6; }
   .summary-ok { color: #085041; font-size: 12px; margin-top: 8px; padding: 8px 10px; background: #E1F5EE; border-radius: 6px; }
-
-  /* ============ 2단계: 추첨 일괄 애니메이션 ============ */
-  .draw-progress-area {
-    background: white;
-    border: 1px solid #e5e5e0;
-    border-radius: 16px;
-    padding: 20px;
-    margin-bottom: 16px;
-    text-align: center;
-  }
+  .draw-progress-area { background: white; border: 1px solid #e5e5e0; border-radius: 16px; padding: 20px; margin-bottom: 16px; text-align: center; }
   .draw-progress-num { font-size: 14px; color: #888; margin-bottom: 6px; }
-  .draw-progress-bar {
-    height: 8px;
-    background: #e5e5e0;
-    border-radius: 999px;
-    overflow: hidden;
-    margin: 12px 0;
-  }
-  .draw-progress-fill {
-    height: 100%;
-    background: linear-gradient(90deg, #534AB7, #1D9E75);
-    width: 0%;
-    transition: width 0.3s;
-  }
-
-  .draw-roulette {
-    background: white;
-    border: 2px solid #1a1a1a;
-    border-radius: 16px;
-    padding: 24px 16px;
-    text-align: center;
-    margin-bottom: 16px;
-    min-height: 280px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
+  .draw-progress-bar { height: 8px; background: #e5e5e0; border-radius: 999px; overflow: hidden; margin: 12px 0; }
+  .draw-progress-fill { height: 100%; background: linear-gradient(90deg, #534AB7, #1D9E75); width: 0%; transition: width 0.3s; }
+  .draw-roulette { background: white; border: 2px solid #1a1a1a; border-radius: 16px; padding: 24px 16px; text-align: center; margin-bottom: 16px; min-height: 280px; display: flex; flex-direction: column; align-items: center; justify-content: center; }
   .draw-roulette-num { font-size: 14px; color: #888; margin-bottom: 6px; }
-  .draw-roulette-type {
-    font-size: 12px;
-    padding: 4px 12px;
-    border-radius: 999px;
-    font-weight: 600;
-    margin-bottom: 16px;
-    display: inline-block;
-  }
+  .draw-roulette-type { font-size: 12px; padding: 4px 12px; border-radius: 999px; font-weight: 600; margin-bottom: 16px; display: inline-block; }
   .type-mixed { background: #EEEDFE; color: #3C3489; }
   .type-mens { background: #E6F1FB; color: #0C447C; }
-
-  .roulette-display {
-    width: 100%;
-    margin: 8px 0;
-    min-height: 140px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    gap: 10px;
-  }
-  .roulette-team {
-    padding: 12px 20px;
-    border-radius: 12px;
-    font-size: 20px;
-    font-weight: 700;
-    min-width: 240px;
-    transition: all 0.1s;
-  }
+  .roulette-display { width: 100%; margin: 8px 0; min-height: 140px; display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 10px; }
+  .roulette-team { padding: 12px 20px; border-radius: 12px; font-size: 20px; font-weight: 700; min-width: 240px; transition: all 0.1s; }
   .roulette-team-a { background: #EEEDFE; color: #26215C; }
   .roulette-team-b { background: #E6F1FB; color: #042C53; }
   .roulette-vs { font-size: 13px; color: #999; font-weight: 400; }
   .roulette-rest { font-size: 13px; color: #666; margin-top: 12px; }
   .spinning .roulette-team { filter: blur(1.5px); }
-
-  /* ============ 3단계: 경기 진행 ============ */
-  .tabs {
-    display: flex;
-    gap: 4px;
-    margin-bottom: 20px;
-    border-bottom: 1px solid #ddd;
-    overflow-x: auto;
-  }
-  .tab {
-    padding: 10px 16px;
-    font-size: 14px;
-    cursor: pointer;
-    border: none;
-    background: transparent;
-    color: #666;
-    border-bottom: 2px solid transparent;
-    margin-bottom: -1px;
-    font-family: inherit;
-    white-space: nowrap;
-  }
+  .tabs { display: flex; gap: 4px; margin-bottom: 20px; border-bottom: 1px solid #ddd; overflow-x: auto; }
+  .tab { padding: 10px 16px; font-size: 14px; cursor: pointer; border: none; background: transparent; color: #666; border-bottom: 2px solid transparent; margin-bottom: -1px; font-family: inherit; white-space: nowrap; }
   .tab.active { color: #1a1a1a; border-bottom-color: #1a1a1a; font-weight: 600; }
   .section { display: none; }
   .section.active { display: block; }
-
-  .play-card {
-    background: white;
-    border: 2px solid #1a1a1a;
-    border-radius: 16px;
-    padding: 24px 20px;
-    margin-bottom: 16px;
-    text-align: center;
-  }
+  .play-card { background: white; border: 2px solid #1a1a1a; border-radius: 16px; padding: 24px 20px; margin-bottom: 16px; text-align: center; }
   .play-num { font-size: 14px; color: #888; margin-bottom: 6px; }
-  .play-teams {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-    margin: 16px 0;
-  }
-
+  .play-teams { display: flex; flex-direction: column; align-items: center; gap: 10px; margin: 16px 0; }
   .pill-m { display: inline-block; padding: 3px 10px; background: #E6F1FB; color: #0C447C; border-radius: 999px; font-size: 13px; margin: 0 2px; font-weight: 500; }
   .pill-w { display: inline-block; padding: 3px 10px; background: #FBEAF0; color: #4B1528; border-radius: 999px; font-size: 13px; margin: 0 2px; font-weight: 500; }
-
-  .controls {
-    display: flex;
-    gap: 8px;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-top: 16px;
-  }
-  .btn {
-    padding: 10px 18px;
-    font-size: 14px;
-    border-radius: 8px;
-    border: 1px solid #d4d4cc;
-    background: white;
-    cursor: pointer;
-    font-family: inherit;
-    transition: all 0.15s;
-    color: #1a1a1a;
-  }
+  .controls { display: flex; gap: 8px; flex-wrap: wrap; justify-content: center; margin-top: 16px; }
+  .btn { padding: 10px 18px; font-size: 14px; border-radius: 8px; border: 1px solid #d4d4cc; background: white; cursor: pointer; font-family: inherit; transition: all 0.15s; color: #1a1a1a; }
   .btn:hover:not(:disabled) { background: #f5f5f0; }
   .btn:active:not(:disabled) { transform: scale(0.97); }
   .btn:disabled { opacity: 0.4; cursor: not-allowed; }
-  .btn-primary {
-    background: #1a1a1a;
-    color: white;
-    border-color: #1a1a1a;
-    font-weight: 600;
-  }
+  .btn-primary { background: #1a1a1a; color: white; border-color: #1a1a1a; font-weight: 600; }
   .btn-primary:hover:not(:disabled) { background: #333; }
   .btn-large { padding: 14px 24px; font-size: 16px; }
   .btn-danger { color: #993356; }
   .btn-block { width: 100%; }
-
-  /* === 전체 일정 (개선) === */
-  .schedule-card {
-    background: white;
-    border: 1px solid #e5e5e0;
-    border-radius: 14px;
-    padding: 0;
-    margin-bottom: 14px;
-    overflow: hidden;
-    cursor: pointer;
-    transition: all 0.15s;
-  }
+  .schedule-card { background: white; border: 1px solid #e5e5e0; border-radius: 14px; padding: 0; margin-bottom: 14px; overflow: hidden; cursor: pointer; transition: all 0.15s; }
   .schedule-card:hover { transform: translateY(-1px); box-shadow: 0 4px 12px rgba(0,0,0,0.04); }
   .schedule-card.is-current { border: 2px solid #BA7517; }
   .schedule-card.is-done { background: #FAFFF8; }
-
-  .schedule-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 12px 16px;
-    background: #fafaf5;
-    border-bottom: 1px solid #f0f0eb;
-  }
+  .schedule-header { display: flex; align-items: center; justify-content: space-between; padding: 12px 16px; background: #fafaf5; border-bottom: 1px solid #f0f0eb; }
   .schedule-card.is-current .schedule-header { background: #FAEEDA; }
   .schedule-card.is-done .schedule-header { background: #E1F5EE; }
-
-  .schedule-num-large {
-    font-size: 16px;
-    font-weight: 700;
-    color: #1a1a1a;
-  }
-  .schedule-num-meta {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-  }
-  .schedule-status {
-    font-size: 12px;
-    padding: 4px 10px;
-    border-radius: 999px;
-    font-weight: 600;
-    background: #f0f0eb;
-    color: #888;
-  }
+  .schedule-num-large { font-size: 16px; font-weight: 700; color: #1a1a1a; }
+  .schedule-num-meta { display: flex; align-items: center; gap: 8px; }
+  .schedule-status { font-size: 12px; padding: 4px 10px; border-radius: 999px; font-weight: 600; background: #f0f0eb; color: #888; }
   .schedule-status.current { background: #BA7517; color: white; }
   .schedule-status.done { background: #1D9E75; color: white; }
-
-  .schedule-body {
-    padding: 16px;
-  }
-  .schedule-team-row {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 10px 12px;
-    border-radius: 10px;
-    font-size: 15px;
-    font-weight: 600;
-    margin-bottom: 6px;
-  }
+  .schedule-body { padding: 16px; }
+  .schedule-team-row { display: flex; align-items: center; justify-content: center; padding: 10px 12px; border-radius: 10px; font-size: 15px; font-weight: 600; margin-bottom: 6px; }
   .schedule-team-row.team-a { background: #EEEDFE; color: #26215C; }
   .schedule-team-row.team-b { background: #E6F1FB; color: #042C53; }
-
-  .schedule-vs-divider {
-    text-align: center;
-    font-size: 11px;
-    color: #aaa;
-    margin: 4px 0;
-    font-weight: 600;
-    letter-spacing: 0.5px;
-  }
-
-  .schedule-score-display {
-    text-align: center;
-    margin-top: 10px;
-    padding: 10px;
-    background: #f5f5f0;
-    border-radius: 8px;
-    font-size: 15px;
-    font-weight: 700;
-    color: #1a1a1a;
-  }
-
-  .schedule-rest {
-    margin-top: 10px;
-    padding-top: 10px;
-    border-top: 1px dashed #e5e5e0;
-    font-size: 12px;
-    color: #888;
-    text-align: center;
-  }
-
-  /* === 출전 통계 (개선) === */
-  .stats-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 10px;
-  }
-  .stat-card {
-    background: white;
-    border: 1px solid #e5e5e0;
-    border-radius: 12px;
-    padding: 14px 18px;
-    display: grid;
-    grid-template-columns: 1fr auto auto auto;
-    align-items: center;
-    gap: 14px;
-  }
-  .stat-rank {
-    font-size: 14px;
-    font-weight: 700;
-    color: #888;
-    min-width: 24px;
-  }
+  .schedule-vs-divider { text-align: center; font-size: 11px; color: #aaa; margin: 4px 0; font-weight: 600; letter-spacing: 0.5px; }
+  .schedule-score-display { text-align: center; margin-top: 10px; padding: 10px; background: #f5f5f0; border-radius: 8px; font-size: 15px; font-weight: 700; color: #1a1a1a; }
+  .schedule-rest { margin-top: 10px; padding-top: 10px; border-top: 1px dashed #e5e5e0; font-size: 12px; color: #888; text-align: center; }
+  .stats-grid { display: grid; grid-template-columns: 1fr; gap: 10px; }
+  .stat-card { background: white; border: 1px solid #e5e5e0; border-radius: 12px; padding: 14px 18px; display: grid; grid-template-columns: 1fr auto auto auto; align-items: center; gap: 14px; }
+  .stat-rank { font-size: 14px; font-weight: 700; color: #888; min-width: 24px; }
   .stat-rank.top1 { color: #BA7517; }
   .stat-rank.top2 { color: #888780; }
   .stat-rank.top3 { color: #993C1D; }
-
   .stat-name-block { display: flex; flex-direction: column; gap: 2px; }
-  .stat-player-name {
-    font-size: 15px;
-    font-weight: 600;
-  }
-  .stat-gender-tag {
-    font-size: 11px;
-    color: #888;
-  }
-
-  .stat-block {
-    text-align: center;
-    min-width: 56px;
-  }
-  .stat-block-label {
-    font-size: 10px;
-    color: #999;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    font-weight: 600;
-  }
-  .stat-block-value {
-    font-size: 18px;
-    font-weight: 700;
-    margin-top: 2px;
-  }
+  .stat-player-name { font-size: 15px; font-weight: 600; }
+  .stat-gender-tag { font-size: 11px; color: #888; }
+  .stat-block { text-align: center; min-width: 56px; }
+  .stat-block-label { font-size: 10px; color: #999; text-transform: uppercase; letter-spacing: 0.5px; font-weight: 600; }
+  .stat-block-value { font-size: 18px; font-weight: 700; margin-top: 2px; }
   .stat-block-value.positive { color: #1D9E75; }
   .stat-block-value.negative { color: #c44; }
   .stat-block-value.zero { color: #888; }
-
-  .stats-header {
-    background: white;
-    border: 1px solid #e5e5e0;
-    border-radius: 12px;
-    padding: 14px 18px;
-    margin-bottom: 10px;
-    display: grid;
-    grid-template-columns: 1fr auto auto auto;
-    align-items: center;
-    gap: 14px;
-    font-size: 11px;
-    color: #888;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    font-weight: 600;
-  }
+  .stats-header { background: white; border: 1px solid #e5e5e0; border-radius: 12px; padding: 14px 18px; margin-bottom: 10px; display: grid; grid-template-columns: 1fr auto auto auto; align-items: center; gap: 14px; font-size: 11px; color: #888; text-transform: uppercase; letter-spacing: 0.5px; font-weight: 600; }
   .stats-header > div { text-align: center; min-width: 56px; }
   .stats-header > div:first-child { text-align: left; padding-left: 38px; }
-
-  /* ============ 모달 ============ */
-  .modal-bg {
-    display: none;
-    position: fixed;
-    inset: 0;
-    background: rgba(0,0,0,0.5);
-    z-index: 100;
-    align-items: center;
-    justify-content: center;
-    padding: 16px;
-  }
+  .modal-bg { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.5); z-index: 100; align-items: center; justify-content: center; padding: 16px; }
   .modal-bg.active { display: flex; }
-  .modal {
-    background: white;
-    border-radius: 16px;
-    padding: 24px;
-    max-width: 400px;
-    width: 100%;
-  }
+  .modal { background: white; border-radius: 16px; padding: 24px; max-width: 400px; width: 100%; }
   .modal h3 { font-size: 18px; margin-bottom: 16px; }
-  .score-row {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 14px;
-    gap: 12px;
-  }
+  .score-row { display: flex; align-items: center; justify-content: space-between; margin-bottom: 14px; gap: 12px; }
   .score-row-label { font-size: 14px; flex: 1; }
-  .score-input {
-    width: 70px;
-    padding: 10px;
-    font-size: 18px;
-    text-align: center;
-    border: 1px solid #d4d4cc;
-    border-radius: 8px;
-    font-family: inherit;
-    font-weight: 600;
-  }
+  .score-input { width: 70px; padding: 10px; font-size: 18px; text-align: center; border: 1px solid #d4d4cc; border-radius: 8px; font-family: inherit; font-weight: 600; }
   .modal-actions { display: flex; gap: 8px; justify-content: flex-end; margin-top: 16px; }
-
   @media (max-width: 480px) {
     .roulette-team { font-size: 17px; min-width: 200px; padding: 10px 14px; }
     .title { font-size: 18px; }
     .player-card { flex-wrap: wrap; }
     .player-input { min-width: 120px; }
-    .stat-card { grid-template-columns: 1fr auto auto auto; gap: 8px; padding: 12px; }
+    .stat-card { gap: 8px; padding: 12px; }
     .stat-block { min-width: 48px; }
-    .stats-header { grid-template-columns: 1fr auto auto auto; gap: 8px; padding: 12px; }
+    .stats-header { gap: 8px; padding: 12px; }
     .stats-header > div { min-width: 48px; }
     .stats-header > div:first-child { padding-left: 32px; }
   }
@@ -532,39 +151,28 @@
     <button class="btn btn-danger" id="reset-btn" style="display:none">처음부터</button>
   </div>
 
-  <!-- ===== 1단계: 인원 등록 ===== -->
   <div class="stage active" id="stage-setup">
     <div class="setup-info">
       <h2>참가 인원 등록</h2>
-      <p>이름과 성별을 입력하세요. 인원은 자유롭게 추가/삭제할 수 있습니다.</p>
+      <p>이름과 성별을 입력하세요. 모든 인원이 동일한 경기 수로 출전하도록 자동 보정됩니다.</p>
       <div class="config-row">
-        <span class="config-label">1인당 출전 경기 수</span>
+        <span class="config-label">희망 출전 경기 수</span>
         <input type="number" class="config-input" id="games-per-player" value="5" min="1" max="20">
-        <span style="font-size: 12px; color: #888;">경기</span>
-      </div>
-      <div class="config-row">
-        <span class="config-label">남복 경기 수</span>
-        <input type="number" class="config-input" id="mens-matches" value="1" min="0" max="20">
-        <span style="font-size: 12px; color: #888;">경기 (나머지는 혼복)</span>
+        <span style="font-size: 12px; color: #888;">경기/인</span>
       </div>
     </div>
 
     <div class="player-list" id="player-list"></div>
-
     <button class="add-player-btn" id="add-player-btn">+ 참가자 추가</button>
-
     <div class="summary-box" id="summary-box"></div>
-
     <button class="btn btn-primary btn-large btn-block" id="start-draw-btn">추첨 시작 →</button>
   </div>
 
-  <!-- ===== 2단계: 추첨 일괄 애니메이션 ===== -->
   <div class="stage" id="stage-draw">
     <div class="draw-progress-area">
       <div class="draw-progress-num" id="draw-overall-num">추첨 0 / 0</div>
       <div class="draw-progress-bar"><div class="draw-progress-fill" id="draw-progress-fill"></div></div>
     </div>
-
     <div class="draw-roulette" id="draw-roulette">
       <div class="draw-roulette-num" id="draw-num">경기 1</div>
       <div class="draw-roulette-type type-mixed" id="draw-type">혼복</div>
@@ -575,21 +183,18 @@
       </div>
       <div class="roulette-rest" id="roulette-rest">휴식: ? · ? · ?</div>
     </div>
-
     <div class="controls">
       <button class="btn btn-primary btn-large" id="start-auto-draw-btn">🎲 자동 추첨 시작</button>
       <button class="btn btn-primary btn-large" id="finish-draw-btn" style="display:none">대진표 확정 →</button>
     </div>
   </div>
 
-  <!-- ===== 3단계: 경기 진행 ===== -->
   <div class="stage" id="stage-play">
     <div class="tabs">
       <button class="tab active" data-tab="current">현재 경기</button>
       <button class="tab" data-tab="schedule">전체 일정</button>
       <button class="tab" data-tab="stats">출전 통계</button>
     </div>
-
     <div class="section active" id="current-section"></div>
     <div class="section" id="schedule-section"></div>
     <div class="section" id="stats-section">
@@ -624,7 +229,7 @@
 
 <script>
 (function(){
-  const STORAGE_KEY = 'tennis-mgr-v4';
+  const STORAGE_KEY = 'tennis-mgr-v5';
 
   let state = {
     stage: 'setup',
@@ -637,8 +242,7 @@
       { id: 6, name: '미라', gender: 'W' },
       { id: 7, name: '혜윤', gender: 'W' }
     ],
-    gamesPerPlayer: 5,
-    mensMatches: 1,
+    requestedGamesPerPlayer: 5,
     schedule: [],
     drawnUpTo: 0,
     currentIdx: 0,
@@ -680,12 +284,10 @@
     document.querySelectorAll('.stage').forEach(s => s.classList.remove('active'));
     document.getElementById('stage-'+name).classList.add('active');
     document.getElementById('reset-btn').style.display = name === 'setup' ? 'none' : 'inline-block';
-
     const sub = document.getElementById('header-subtitle');
     if (name === 'setup') sub.textContent = '인원을 등록해주세요';
     else if (name === 'draw') sub.textContent = '추첨 진행 중';
     else sub.textContent = '경기 진행 중';
-
     saveState();
   }
 
@@ -708,7 +310,6 @@
     container.querySelectorAll('.player-card').forEach(card => {
       const id = parseInt(card.dataset.id);
       const player = state.players.find(p => p.id === id);
-
       card.querySelector('[data-field="name"]').addEventListener('input', (e) => {
         player.name = e.target.value;
         saveState();
@@ -731,51 +332,63 @@
     });
   }
 
+  // 핵심: 모두 균등하게 출전 가능한 경기 수 자동 계산
+  function findOptimalGamesPerPlayer(total, men, women, requested) {
+    if (women === 1) return null;
+    const candidates = [];
+    for (let gpp = 1; gpp <= 30; gpp++) {
+      const totalSlots = total * gpp;
+      if (totalSlots % 4 !== 0) continue;
+      const totalMatches = totalSlots / 4;
+      const womenSlots = women * gpp;
+      if (womenSlots % 2 !== 0) continue;
+      const mixedMatches = womenSlots / 2;
+      const mensMatches = totalMatches - mixedMatches;
+      if (mensMatches < 0) continue;
+      if (mensMatches > 0 && men < 4) continue;
+      if (mixedMatches > 0 && men < 2) continue;
+      if (women === 0 && mixedMatches > 0) continue;
+      const menSlotsNeeded = mixedMatches * 2 + mensMatches * 4;
+      const menSlotsAvailable = men * gpp;
+      if (menSlotsNeeded !== menSlotsAvailable) continue;
+      candidates.push({ gpp, totalMatches, mixedMatches, mensMatches });
+    }
+    if (candidates.length === 0) return null;
+    candidates.sort((a, b) => {
+      const diffA = Math.abs(a.gpp - requested);
+      const diffB = Math.abs(b.gpp - requested);
+      if (diffA !== diffB) return diffA - diffB;
+      return a.gpp - b.gpp;
+    });
+    return candidates[0];
+  }
+
   function calculateScheduleStats() {
     const validPlayers = state.players.filter(p => p.name.trim() !== '');
     const total = validPlayers.length;
     const men = validPlayers.filter(p => p.gender === 'M').length;
     const women = validPlayers.filter(p => p.gender === 'W').length;
-    const gamesPerPlayer = state.gamesPerPlayer;
-    const userMensMatches = state.mensMatches;
+    const requested = state.requestedGamesPerPlayer;
 
     if (total < 4) return { total, men, women, valid: false, msg: '최소 4명 이상 필요합니다.' };
-    if (gamesPerPlayer < 1) return { total, men, women, valid: false, msg: '경기 수는 1 이상이어야 합니다.' };
+    if (requested < 1) return { total, men, women, valid: false, msg: '경기 수는 1 이상이어야 합니다.' };
     if (women === 1) return { total, men, women, valid: false, msg: '여자 1명일 경우 혼복 페어가 안 만들어집니다. 0명 또는 2명 이상으로 설정해주세요.' };
 
-    const totalSlots = total * gamesPerPlayer;
-    const totalMatches = Math.ceil(totalSlots / 4);
-
-    // 남복 경기 수 검증
-    if (userMensMatches > totalMatches) {
-      return { total, men, women, valid: false, msg: '남복 경기 수가 총 경기 수('+totalMatches+')를 초과합니다.' };
+    const optimal = findOptimalGamesPerPlayer(total, men, women, requested);
+    if (!optimal) {
+      return { total, men, women, valid: false, msg: '현재 인원 구성으로는 균등 배분이 불가능합니다. 인원을 조정해주세요.' };
     }
-    if (userMensMatches > 0 && men < 4) {
-      return { total, men, women, valid: false, msg: '남복 경기를 진행하려면 남자 4명 이상이 필요합니다.' };
-    }
-
-    const mensMatches = userMensMatches;
-    const mixedMatches = totalMatches - mensMatches;
-
-    // 혼복 경기에 여성 출전 가능 여부 확인
-    if (women === 0 && mixedMatches > 0) {
-      return { total, men, women, valid: false, msg: '여자 인원이 없어 혼복 경기가 불가능합니다. 남복 경기 수를 '+totalMatches+'로 설정하거나 여자를 추가해주세요.' };
-    }
-
-    // 여성 1인당 출전 가능 횟수 검증 (혼복만 출전)
-    // 혼복 슬롯: mixedMatches * 2명 = 여자 슬롯
-    // 여자 1인당 평균 출전 = (mixedMatches * 2) / women
-    if (women >= 2) {
-      const womenAvgPlay = (mixedMatches * 2) / women;
-      if (womenAvgPlay > gamesPerPlayer + 1.5) {
-        return { total, men, women, valid: false, msg: '여자 출전 횟수가 너무 많아집니다. 남복 경기 수를 늘리거나 여자 인원을 늘려주세요. (현재 여자 1인당 평균 '+womenAvgPlay.toFixed(1)+'경기)' };
-      }
-      if (womenAvgPlay < gamesPerPlayer - 1.5 && mixedMatches > 0) {
-        return { total, men, women, valid: false, msg: '여자 출전 횟수가 너무 적어집니다. 남복 경기 수를 줄이거나 1인당 출전 경기를 줄여주세요. (현재 여자 1인당 평균 '+womenAvgPlay.toFixed(1)+'경기)' };
-      }
-    }
-
-    return { total, men, women, totalMatches, mixedMatches, mensMatches, valid: true };
+    const adjusted = optimal.gpp !== requested;
+    return {
+      total, men, women,
+      gamesPerPlayer: optimal.gpp,
+      requestedGames: requested,
+      adjusted,
+      totalMatches: optimal.totalMatches,
+      mixedMatches: optimal.mixedMatches,
+      mensMatches: optimal.mensMatches,
+      valid: true
+    };
   }
 
   function renderSummary() {
@@ -784,15 +397,22 @@
     let html = '';
     html += '<div class="summary-row"><span class="label">총 인원</span><span class="value">'+stats.total+'명 (남 '+stats.men+' · 여 '+stats.women+')</span></div>';
     if (stats.valid) {
+      if (stats.adjusted) {
+        html += '<div class="summary-row"><span class="label">1인당 출전</span><span class="value adjusted">'+stats.requestedGames+'경기 → '+stats.gamesPerPlayer+'경기</span></div>';
+      } else {
+        html += '<div class="summary-row"><span class="label">1인당 출전</span><span class="value">'+stats.gamesPerPlayer+'경기 (전원 동일)</span></div>';
+      }
       html += '<div class="summary-row"><span class="label">총 경기 수</span><span class="value">'+stats.totalMatches+'경기</span></div>';
       html += '<div class="summary-row"><span class="label">혼복 / 남복</span><span class="value">'+stats.mixedMatches+' + '+stats.mensMatches+'경기</span></div>';
-      html += '<div class="summary-row"><span class="label">1인당 출전</span><span class="value">평균 '+state.gamesPerPlayer+'경기</span></div>';
-      html += '<div class="summary-ok">✓ 추첨 가능합니다</div>';
+      if (stats.adjusted) {
+        html += '<div class="summary-info">ℹ 입력하신 '+stats.requestedGames+'경기는 '+stats.total+'명(남'+stats.men+'·여'+stats.women+')으로 완전 균등이 불가능하여, 가장 가까운 균등 가능 값인 '+stats.gamesPerPlayer+'경기로 자동 조정되었습니다.</div>';
+      } else {
+        html += '<div class="summary-ok">✓ 모든 인원이 정확히 '+stats.gamesPerPlayer+'경기씩 출전합니다</div>';
+      }
     } else {
       html += '<div class="summary-warning">⚠ '+stats.msg+'</div>';
     }
     box.innerHTML = html;
-
     document.getElementById('start-draw-btn').disabled = !stats.valid;
   }
 
@@ -807,41 +427,35 @@
     const totalMatches = stats.totalMatches;
     const mixedMatches = stats.mixedMatches;
     const mensMatches = stats.mensMatches;
+    const targetGames = stats.gamesPerPlayer;
 
-    // 매치 유형 분산 배치
     const arrangedTypes = [];
     if (mensMatches === 0) {
       for (let i = 0; i < mixedMatches; i++) arrangedTypes.push('혼복');
     } else if (mixedMatches === 0) {
       for (let i = 0; i < mensMatches; i++) arrangedTypes.push('남복');
     } else {
-      const interval = Math.floor(totalMatches / mensMatches);
-      let mensCount = 0;
-      let mixedCount = 0;
+      const interval = totalMatches / mensMatches;
+      const mensPositions = new Set();
+      for (let k = 0; k < mensMatches; k++) {
+        mensPositions.add(Math.floor(interval * k + interval / 2));
+      }
+      let mensCount = 0, mixedCount = 0;
       for (let i = 0; i < totalMatches; i++) {
-        const desiredMensAt = Math.floor((mensCount + 0.5) * interval);
-        if (mensCount < mensMatches && i >= desiredMensAt && (mixedCount >= mixedMatches || i % interval === Math.floor(interval/2))) {
-          arrangedTypes.push('남복');
-          mensCount++;
+        if (mensPositions.has(i) && mensCount < mensMatches) {
+          arrangedTypes.push('남복'); mensCount++;
         } else if (mixedCount < mixedMatches) {
-          arrangedTypes.push('혼복');
-          mixedCount++;
+          arrangedTypes.push('혼복'); mixedCount++;
         } else {
-          arrangedTypes.push('남복');
-          mensCount++;
+          arrangedTypes.push('남복'); mensCount++;
         }
       }
     }
 
-    const target = {};
-    validPlayers.forEach(p => target[p.name] = state.gamesPerPlayer);
-
     const played = {};
     validPlayers.forEach(p => played[p.name] = 0);
-
     const partnerCount = {};
     const matchupCount = {};
-
     function pairKey(a, b) { return [a, b].sort().join('|'); }
 
     const schedule = [];
@@ -852,15 +466,19 @@
 
       let candidatePool;
       if (type === '남복') {
-        candidatePool = men;
+        candidatePool = men.filter(n => played[n] < targetGames);
+        if (candidatePool.length < 4) candidatePool = [...men];
       } else {
-        candidatePool = [...men, ...women];
+        const eligibleMen = men.filter(n => played[n] < targetGames);
+        const eligibleWomen = women.filter(n => played[n] < targetGames);
+        const useMen = eligibleMen.length >= 2 ? eligibleMen : men;
+        const useWomen = eligibleWomen.length >= 2 ? eligibleWomen : women;
+        candidatePool = [...useMen, ...useWomen];
       }
 
       const scored = candidatePool.map(name => {
-        const need = target[name] - played[name];
-        const remaining = remainingMatches;
-        const urgency = need / remaining;
+        const need = targetGames - played[name];
+        const urgency = need / remainingMatches;
         return { name, need, urgency, played: played[name], gender: women.includes(name) ? 'W' : 'M' };
       });
 
@@ -909,20 +527,12 @@
       });
 
       const restAll = validPlayers.map(p => p.name).filter(n => !bestA.includes(n) && !bestB.includes(n));
-
-      schedule.push({
-        n: mi + 1,
-        type,
-        a: bestA,
-        b: bestB,
-        rest: restAll
-      });
+      schedule.push({ n: mi + 1, type, a: bestA, b: bestB, rest: restAll });
     }
 
     return schedule;
   }
 
-  // ============== 추첨: 일괄 자동 처리 ==============
   function startDraw() {
     const schedule = generateSchedule();
     if (!schedule) return;
@@ -964,10 +574,8 @@
       await animateMatch(m, i, validPlayers, men, women);
       state.drawnUpTo = i + 1;
       saveState();
-      // 짧은 휴지기
       await sleep(500);
     }
-
     document.getElementById('finish-draw-btn').style.display = 'inline-block';
   }
 
@@ -978,7 +586,6 @@
       const display = document.getElementById('roulette-display');
       const restEl = document.getElementById('roulette-rest');
       const total = state.schedule.length;
-
       document.getElementById('draw-num').textContent = '경기 ' + m.n;
       const typeEl = document.getElementById('draw-type');
       typeEl.textContent = m.type;
@@ -1023,7 +630,6 @@
     });
   }
 
-  // ============== 3단계: 경기 진행 ==============
   function renderCurrentMatch() {
     const container = document.getElementById('current-section');
     const m = state.schedule[state.currentIdx];
@@ -1052,7 +658,6 @@
     html += '<button class="btn" id="next-match-btn"' + (state.currentIdx >= state.schedule.length - 1 ? ' disabled' : '') + '>다음 ▶</button>';
     html += '</div>';
     html += '</div>';
-
     container.innerHTML = html;
 
     document.getElementById('prev-match-btn').addEventListener('click', () => {
@@ -1071,16 +676,13 @@
       const isDone = state.finished[m.n];
       const isCurrent = idx === state.currentIdx && !isDone;
       const score = state.scores[m.n];
-
       let cardCls = 'schedule-card';
       if (isDone) cardCls += ' is-done';
       else if (isCurrent) cardCls += ' is-current';
-
       let statusCls = 'schedule-status';
       let statusTxt = '대기';
       if (isDone) { statusCls += ' done'; statusTxt = '완료'; }
       else if (isCurrent) { statusCls += ' current'; statusTxt = '진행중'; }
-
       const typeCls = m.type === '혼복' ? 'type-mixed' : 'type-mens';
 
       html += '<div class="'+cardCls+'" data-idx="'+idx+'">';
@@ -1146,7 +748,6 @@
       }
     });
 
-    // 득실차로 정렬, 동률은 승수, 그 다음 이름순
     const sortedPlayers = Object.values(stats).sort((a, b) => {
       const diffA = a.pointsFor - a.pointsAgainst;
       const diffB = b.pointsFor - b.pointsAgainst;
@@ -1218,7 +819,6 @@
     renderStats();
   }
 
-  // ============== 이벤트 바인딩 ==============
   document.getElementById('add-player-btn').addEventListener('click', () => {
     const menCount = state.players.filter(p => p.gender === 'M').length;
     const womenCount = state.players.filter(p => p.gender === 'W').length;
@@ -1229,13 +829,7 @@
   });
 
   document.getElementById('games-per-player').addEventListener('input', (e) => {
-    state.gamesPerPlayer = parseInt(e.target.value) || 5;
-    saveState();
-    renderSummary();
-  });
-
-  document.getElementById('mens-matches').addEventListener('input', (e) => {
-    state.mensMatches = Math.max(0, parseInt(e.target.value) || 0);
+    state.requestedGamesPerPlayer = parseInt(e.target.value) || 5;
     saveState();
     renderSummary();
   });
@@ -1266,21 +860,16 @@
     }
   });
 
-  // ============== 초기화 ==============
   loadState();
   renderPlayerList();
   renderSummary();
-  document.getElementById('games-per-player').value = state.gamesPerPlayer;
-  document.getElementById('mens-matches').value = state.mensMatches;
+  document.getElementById('games-per-player').value = state.requestedGamesPerPlayer;
 
   if (state.stage === 'play') {
     showStage('play');
     renderCurrentMatch();
     renderSchedule();
     renderStats();
-  } else if (state.stage === 'draw' && state.schedule.length > 0) {
-    // 추첨 단계에서 새로고침된 경우 → setup으로 복귀 (재추첨 필요)
-    showStage('setup');
   } else {
     showStage('setup');
   }
